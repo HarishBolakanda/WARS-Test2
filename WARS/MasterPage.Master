@@ -1,0 +1,264 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="WARS.MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Warner Artist Royalties System</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <link id="Link1" href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+
+        //Global variables
+        var warningMsgOnUnSavedData = "You have made changes that are not saved. Return to Save or Exit without saving.";
+
+        //===========End
+
+        //set screen width based on user window width. This is used to avoid disordering of grid columns an headers due to fixed header implementation
+        var windowWidth;
+        function SetScreenWidth() {
+            windowWidth = window.screen.availWidth;
+            windowWidth = document.documentElement.clientWidth; //browser window width   
+            document.getElementById("<%=frmMasterPage.ClientID %>").style.width = windowWidth + "px";
+
+            //Harish - handle only for the screens where grid having many columns - TO DO **
+            //as the screens are designed relatively with reference to screen width of 1500px, 
+            //set screen width to 1500 if window width is < 1500
+            if (windowWidth < 1500) {
+                windowWidth = 1500;
+                document.getElementById("<%=frmMasterPage.ClientID %>").style.width = windowWidth + "px";
+            }
+            else {
+                document.getElementById("<%=frmMasterPage.ClientID %>").style.width = windowWidth + "px";
+            }
+
+        }
+
+        //redirect to exception page on any javascript/client side error
+        //window.onerror = function () {            
+        //    document.getElementById('<%=btnClientSideError.ClientID%>').click();
+        //}
+
+        window.onerror = function (errorMsg, url, lineNumber) {
+            //Harish 22-08-2018: modifying so that users does not get complete error message
+            //var error = "Browser side error : " + errorMsg + " Script: " + url + " Line: " + lineNumber;
+            var error = "Application Browser side error";
+            document.getElementById("<%=hdnBrowserError.ClientID %>").value = error;
+            document.getElementById('<%=btnClientSideError.ClientID%>').click();
+        }
+
+        //===========End
+
+        //=============Master page page load - Start ============
+        window.onload = OnWindowLoadMstrPage;
+        window.onresize = SetScreenWidth;
+
+        //as window.onload event fires only once(either in master page or child page) handling related functionality in master page
+        function OnWindowLoadMstrPage() {
+            //set session timeout
+            StartSessionTimeout();
+
+            //**This function name should not be changed
+            //This is being called on every child page
+            //as this function is present only in the screens where grid is present, handle this
+            try {
+                SetGrdPnlHeightOnLoad();
+            }
+            catch (e) {
+                //do nothing
+            }
+
+            //set screen width according to browser width
+            SetScreenWidth();
+
+            //check browser - as application is compatible only to IE now, pop up a message if not an IE browser            
+            if (!((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true))) {
+
+                alert("Application compatible only on Internet Explorer");
+                window.location = "../Common/ExceptionPage.aspx";
+            }
+
+        }
+
+        //=============Master page page load - End ============
+
+        //=============Handling Session timeout - Start ============        
+        function StartSessionTimeout() {
+            hdnSessionTimeOutVal = document.getElementById("<%=hdnSessionTimeOutVal.ClientID %>").value;
+            //reset session 2 mins earlier to the actual session timeout set in config
+            if (hdnSessionTimeOutVal == "") {
+                //just setting the session timeout to 10mins in case it is not populated
+                hdnSessionTimeOutVal = "10";
+            }
+
+            hdnSessionTimeOutVal = Number(hdnSessionTimeOutVal) - 2;
+            timeout = 1000 * 60 * Number(hdnSessionTimeOutVal);//8 minutes
+            setTimeout("SessionPostback()", timeout);
+
+        }
+
+        //reset the session timer and call session handler
+        function SessionPostback() {
+            StartSessionTimeout();
+            KeepSessionAlive();
+        }
+
+        //call session handler page to reset the session
+        function KeepSessionAlive() {
+            url = "../Common/SessionAliveHandler.ashx?";
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", url, true);
+            xmlHttp.send();
+
+        }
+
+        //=============Handling Session timeout - End ============
+
+        //opening menu screen in javascript to handle issue of data not saved warning validation
+        function OpenMenuScreen() {
+            if (window.IsDataChanged != null && IsDataChanged()) {
+                window.onbeforeunload = null;
+                OpenPopupOnUnSavedData('../Common/MenuScreen.aspx')
+
+            }
+            else {
+                window.location = "../Common/MenuScreen.aspx";
+                return true;
+            }
+        }
+        //==================== End
+
+        //WUIN-662 - Handling 'Data un saved warning'
+        //This function will be called from child screen for confirmation on un saved data
+        function OpenPopupOnUnSavedData(pageName) {
+            var warnPopup = $find('<%= mepDataUnSavedWarning.ClientID %>');
+            if (warnPopup != null) {
+                document.getElementById("<%=lblDataUnSavedWarnMsg.ClientID %>").innerText = warningMsgOnUnSavedData;
+                document.getElementById("<%=hdnRedirectToPage.ClientID %>").value = pageName;
+                warnPopup.show();
+            }
+
+        }
+
+        function OnDataUnSavedReturnClick() {
+            var warnPopup = $find('<%= mepDataUnSavedWarning.ClientID %>');
+            if (warnPopup != null) {
+                warnPopup.hide();
+            }
+
+            window.onbeforeunload = WarnOnUnSavedData;
+            return false;
+        }
+
+        function OnDataUnSavedExitClick() {
+            var RedirectToPage = document.getElementById("<%=hdnRedirectToPage.ClientID %>").value;
+            window.location = RedirectToPage;
+        }
+
+        //==================== End
+
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin: 0; padding: 0; height: 100%">
+    <form id="frmMasterPage" runat="server" style="margin-bottom: 0; margin-top: 0" onkeydown="return (event.keyCode!=13)">
+        <ajaxToolkit:ToolkitScriptManager runat="Server" ID="tsm" AsyncPostBackTimeout="3600" EnablePageMethods="true" />
+        <table id="tblAppHeader" runat="server" border="0" frame="void" width="100%">
+            <tr>
+                <td width="5%" valign="middle">
+                    <img src="../Images/mur-logo_trim.png" alt="" title="" />
+                </td>
+                <td width="50%" valign="middle">
+                    <font face="verdana" size="5" color="#3333cc">&nbsp;Warner Artist Royalties System
+                        <asp:Label ID="lblDBname" runat="server" Font-Names="verdana" ForeColor="#3333cc"></asp:Label>
+                    </font>
+                </td>
+                <td width="30%" valign="middle"></td>
+                <td id="tdHomeBtn" runat="server" width="15%" align="right" valign="top">
+                    <table width="100%" cellspacing="1" cellpadding="1">
+                        <tr>
+                            <td style="padding-right: 3px; padding-left: 0;">
+                                <asp:Button ID="lnkBtnHome" runat="server" Text="Home" UseSubmitBehavior="false" CausesValidation="false"
+                                    CssClass="Home_link" TabIndex="0" Width="96%" OnClick="lnkBtnHome_Click" OnClientClick="if (!OpenMenuScreen()) { return false;};" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolderLinkButtons" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:ImageButton ID="btnWARSGlobal" ImageUrl="~/Images/Map.jpg" runat="server" Style="cursor: pointer" Width="35%"
+                                    OnClick="imgbtnWARSGlobal_Click" ToolTip="WARS Global" Visible="false" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <div style="width: 100%; height: auto;">
+            <table border="0" frame="void" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td valign="top" width="100%" height="100%" align="left">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <%--Warning popup--%>
+        <asp:Button ID="dummyDataUnSavedWarnMsg" runat="server" Style="display: none" />
+        <ajaxToolkit:ModalPopupExtender ID="mepDataUnSavedWarning" runat="server" PopupControlID="pnlDataUnSavedWarnMsgPopup" TargetControlID="dummyDataUnSavedWarnMsg"
+            CancelControlID="btnDataUnSavedWarnExit" BackgroundCssClass="popupBox">
+        </ajaxToolkit:ModalPopupExtender>
+        <asp:Panel ID="pnlDataUnSavedWarnMsgPopup" runat="server" align="center" Width="25%" CssClass="popupPanel" Style="display: none">
+            <table width="100%">
+                <tr>
+                    <td class="ScreenName" style="align-content: center">
+                        <asp:Label ID="lblDataUnSavedConfirm" runat="server" Text="Unsaved Data Warning" CssClass="identifierLable"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblDataUnSavedWarnMsg" runat="server" CssClass="identifierLable"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%">
+                            <tr>
+                                <td width="48%" align="right">
+                                    <asp:Button ID="btnDataUnSavedWarnReturn" runat="server" Text="Return" CssClass="ButtonStyle" Width="30%" OnClientClick="return OnDataUnSavedReturnClick();" />
+                                </td>
+                                <td width="4%"></td>
+                                <td width="48%" align="left">
+                                    <asp:Button ID="btnDataUnSavedWarnExit" runat="server" Text="Exit" CssClass="ButtonStyle" Width="30%" OnClientClick="OnDataUnSavedExitClick();" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </asp:Panel>
+
+
+        <asp:HiddenField ID="hdnRedirectToPage" runat="server" />
+        <asp:HiddenField ID="hdnOpenMenuScreen" runat="server" Value="Y" />
+        <asp:HiddenField ID="hdnBrowserError" runat="server" Value="Y" />
+        <asp:HiddenField ID="hdnSessionTimeOutVal" runat="server" />
+        <%--WUIN-599
+   Used to identify if navigation is with in contract screens or outside.
+   it is set to Y if with in contract screens.--%>
+        <asp:HiddenField ID="hdnIsContractScreen" runat="server" Value="N" />
+        <asp:HiddenField ID="hdnIsNotContractScreen" runat="server" Value="N" />
+        <asp:Button ID="btnClientSideError" runat="server" Style="display: none;" OnClick="btnClientSideError_Click" CausesValidation="false" />
+    </form>
+</body>
+</html>
+

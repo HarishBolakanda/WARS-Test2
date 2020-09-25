@@ -1,0 +1,951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68F25FEF-C076-4CB5-BBF8-E1F0A9533B1F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WARS</RootNamespace>
+    <AssemblyName>WARS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />    
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60623.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="BusinessLayer">
+      <HintPath>..\BusinessLayer\bin\Debug\BusinessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>bin\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.PluginManager, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\CrystalDecisions.Enterprise.PluginManager.dll</HintPath>
+    </Reference>
+    <Reference Include="IBusiness">
+      <HintPath>..\IBusiness\bin\Debug\IBusiness.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audit\ArtistAudit.aspx.cs">
+      <DependentUpon>ArtistAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\ArtistAudit.aspx.designer.cs">
+      <DependentUpon>ArtistAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\AutoParticipantAudit.aspx.cs">
+      <DependentUpon>AutoParticipantAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\AutoParticipantAudit.aspx.designer.cs">
+      <DependentUpon>AutoParticipantAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\AutoParticipantMaintAudit.aspx.cs">
+      <DependentUpon>AutoParticipantMaintAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\AutoParticipantMaintAudit.aspx.designer.cs">
+      <DependentUpon>AutoParticipantMaintAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\CatalogueDetailsAudit.aspx.cs">
+      <DependentUpon>CatalogueDetailsAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\CatalogueDetailsAudit.aspx.designer.cs">
+      <DependentUpon>CatalogueDetailsAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\ConfigurationGroupAudit.aspx.cs">
+      <DependentUpon>ConfigurationGroupAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\ConfigurationGroupAudit.aspx.designer.cs">
+      <DependentUpon>ConfigurationGroupAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\InterestedPartyAudit.aspx.cs">
+      <DependentUpon>InterestedPartyAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\InterestedPartyAudit.aspx.designer.cs">
+      <DependentUpon>InterestedPartyAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\ParticipantAudit.aspx.designer.cs">
+      <DependentUpon>ParticipantAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\RoyaltorGroupingAudit.aspx.cs">
+      <DependentUpon>RoyaltorGroupingAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\ParticipantAudit.aspx.cs">
+      <DependentUpon>ParticipantAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\RoyaltorEscalationRatesAudit.aspx.cs">
+      <DependentUpon>RoyaltorEscalationRatesAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\RoyaltorEscalationRatesAudit.aspx.designer.cs">
+      <DependentUpon>RoyaltorEscalationRatesAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\RoyaltorGroupingAudit.aspx.designer.cs">
+      <DependentUpon>RoyaltorGroupingAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\RoyaltorPackagingRatesAudit.aspx.cs">
+      <DependentUpon>RoyaltorPackagingRatesAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\RoyaltorPackagingRatesAudit.aspx.designer.cs">
+      <DependentUpon>RoyaltorPackagingRatesAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\RoyaltorPayeeAudit.aspx.cs">
+      <DependentUpon>RoyaltorPayeeAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\RoyaltorPayeeAudit.aspx.designer.cs">
+      <DependentUpon>RoyaltorPayeeAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\RoyaltorPayeeSuppAudit.aspx.cs">
+      <DependentUpon>RoyaltorPayeeSuppAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\RoyaltorPayeeSuppAudit.aspx.designer.cs">
+      <DependentUpon>RoyaltorPayeeSuppAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\RoyaltorRatesAudit.aspx.cs">
+      <DependentUpon>RoyaltorRatesAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\RoyaltorRatesAudit.aspx.designer.cs">
+      <DependentUpon>RoyaltorRatesAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\RoyaltorSubsidiaryRatesAudit.aspx.cs">
+      <DependentUpon>RoyaltorSubsidiaryRatesAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\RoyaltorSubsidiaryRatesAudit.aspx.designer.cs">
+      <DependentUpon>RoyaltorSubsidiaryRatesAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\TerritoryGroupAudit.aspx.cs">
+      <DependentUpon>TerritoryGroupAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\TerritoryGroupAudit.aspx.designer.cs">
+      <DependentUpon>TerritoryGroupAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SessionAliveHandler.ashx.cs">
+      <DependentUpon>SessionAliveHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WARSAffiliates.aspx.cs">
+      <DependentUpon>WARSAffiliates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\WARSAffiliates.aspx.designer.cs">
+      <DependentUpon>WARSAffiliates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\NotesRichTextBox.aspx.cs">
+      <DependentUpon>NotesRichTextBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\NotesRichTextBox.aspx.designer.cs">
+      <DependentUpon>NotesRichTextBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractEscHistory.aspx.cs">
+      <DependentUpon>RoyContractEscHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractEscHistory.aspx.designer.cs">
+      <DependentUpon>RoyContractEscHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractGrouping.aspx.designer.cs">
+      <DependentUpon>RoyContractGrouping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractPayeeSupp.aspx.cs">
+      <DependentUpon>RoyContractPayeeSupp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractPayeeSupp.aspx.designer.cs">
+      <DependentUpon>RoyContractPayeeSupp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractTaxDetails.aspx.cs">
+      <DependentUpon>RoyContractTaxDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractTaxDetails.aspx.designer.cs">
+      <DependentUpon>RoyContractTaxDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\ArtistResponsibilityMaintenance.aspx.cs">
+      <DependentUpon>ArtistResponsibilityMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\ArtistResponsibilityMaintenance.aspx.designer.cs">
+      <DependentUpon>ArtistResponsibilityMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\StatementTextMaintenance.aspx.cs">
+      <DependentUpon>StatementTextMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\StatementTextMaintenance.aspx.designer.cs">
+      <DependentUpon>StatementTextMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\TaxRateMaintanance.aspx.cs">
+      <DependentUpon>TaxRateMaintanance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\TaxRateMaintanance.aspx.designer.cs">
+      <DependentUpon>TaxRateMaintanance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\TransactionMaintenance.aspx.cs">
+      <DependentUpon>TransactionMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\RoyaltorBalance.aspx.cs">
+      <DependentUpon>RoyaltorBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\RoyaltorBalance.aspx.designer.cs">
+      <DependentUpon>RoyaltorBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\TerritoryGroupRoyaltors.aspx.cs">
+      <DependentUpon>TerritoryGroupRoyaltors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\TerritoryGroupRoyaltors.aspx.designer.cs">
+      <DependentUpon>TerritoryGroupRoyaltors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\TransactionMaintenance.aspx.designer.cs">
+      <DependentUpon>TransactionMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotesOverview\NotesOverview.aspx.cs">
+      <DependentUpon>NotesOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotesOverview\NotesOverview.aspx.designer.cs">
+      <DependentUpon>NotesOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\AutoParticipantMaintenance.aspx.cs">
+      <DependentUpon>AutoParticipantMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\AutoParticipantMaintenance.aspx.designer.cs">
+      <DependentUpon>AutoParticipantMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\AutoParticipantSearch.aspx.cs">
+      <DependentUpon>AutoParticipantSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\AutoParticipantSearch.aspx.designer.cs">
+      <DependentUpon>AutoParticipantSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\CatalogueNotes.aspx.cs">
+      <DependentUpon>CatalogueNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\CatalogueNotes.aspx.designer.cs">
+      <DependentUpon>CatalogueNotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\CatalogueNotesRichTextBox.aspx.cs">
+      <DependentUpon>CatalogueNotesRichTextBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\CatalogueNotesRichTextBox.aspx.designer.cs">
+      <DependentUpon>CatalogueNotesRichTextBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\PaymentApproval.aspx.cs">
+      <DependentUpon>PaymentApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\PaymentApproval.aspx.designer.cs">
+      <DependentUpon>PaymentApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\PaymentDetails.aspx.cs">
+      <DependentUpon>PaymentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\PaymentDetails.aspx.designer.cs">
+      <DependentUpon>PaymentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\SupplierAddressOverwrite.aspx.cs">
+      <DependentUpon>SupplierAddressOverwrite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment\SupplierAddressOverwrite.aspx.designer.cs">
+      <DependentUpon>SupplierAddressOverwrite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\AccountTypeMaintenance.aspx.cs">
+      <DependentUpon>AccountTypeMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\AccountTypeMaintenance.aspx.designer.cs">
+      <DependentUpon>AccountTypeMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FuzzySearch.asmx.cs">
+      <DependentUpon>FuzzySearch.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\AdHocStatement.aspx.cs">
+      <DependentUpon>AdHocStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\AdHocStatement.aspx.designer.cs">
+      <DependentUpon>AdHocStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\BOReports.aspx.cs">
+      <DependentUpon>BOReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporting\BOReports.aspx.designer.cs">
+      <DependentUpon>BOReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\BreakdownGroupMaintenance.aspx.cs">
+      <DependentUpon>BreakdownGroupMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\BreakdownGroupMaintenance.aspx.designer.cs">
+      <DependentUpon>BreakdownGroupMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\CatalogueMaintenance.aspx.cs">
+      <DependentUpon>CatalogueMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\CatalogueMaintenance.aspx.designer.cs">
+      <DependentUpon>CatalogueMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\CatalogueSearch.aspx.cs">
+      <DependentUpon>CatalogueSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\CatalogueSearch.aspx.designer.cs">
+      <DependentUpon>CatalogueSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\CompanyAudit.aspx.cs">
+      <DependentUpon>CompanyAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\CompanyAudit.aspx.designer.cs">
+      <DependentUpon>CompanyAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\CompanyMaintenance.aspx.cs">
+      <DependentUpon>CompanyMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\CompanyMaintenance.aspx.designer.cs">
+      <DependentUpon>CompanyMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\ConfigurationGrouping.aspx.cs">
+      <DependentUpon>ConfigurationGrouping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\ConfigurationGrouping.aspx.designer.cs">
+      <DependentUpon>ConfigurationGrouping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\ConfigurationSearch.aspx.cs">
+      <DependentUpon>ConfigurationSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\ConfigurationSearch.aspx.designer.cs">
+      <DependentUpon>ConfigurationSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractHdrLinkButtons.ascx.cs">
+      <DependentUpon>ContractHdrLinkButtons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractHdrLinkButtons.ascx.designer.cs">
+      <DependentUpon>ContractHdrLinkButtons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractNavigationButtons.ascx.cs">
+      <DependentUpon>ContractNavigationButtons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractNavigationButtons.ascx.designer.cs">
+      <DependentUpon>ContractNavigationButtons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\RoyContractAudit.aspx.cs">
+      <DependentUpon>RoyContractAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\RoyContractAudit.aspx.designer.cs">
+      <DependentUpon>RoyContractAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractEscRates.aspx.cs">
+      <DependentUpon>RoyContractEscRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractEscRates.aspx.designer.cs">
+      <DependentUpon>RoyContractEscRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractGrouping.aspx.cs">
+      <DependentUpon>RoyContractGrouping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractNotes.aspx.cs">
+      <DependentUpon>RoyContractNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractNotes.aspx.designer.cs">
+      <DependentUpon>RoyContractNotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractOptionPeriods.aspx.cs">
+      <DependentUpon>RoyContractOptionPeriods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractOptionPeriods.aspx.designer.cs">
+      <DependentUpon>RoyContractOptionPeriods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractPayee.aspx.cs">
+      <DependentUpon>RoyContractPayee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractPayee.aspx.designer.cs">
+      <DependentUpon>RoyContractPayee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractPkgRates.aspx.cs">
+      <DependentUpon>RoyContractPkgRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractPkgRates.aspx.designer.cs">
+      <DependentUpon>RoyContractPkgRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractRoyRates.aspx.cs">
+      <DependentUpon>RoyContractRoyRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractRoyRates.aspx.designer.cs">
+      <DependentUpon>RoyContractRoyRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyContractSubRates.aspx.cs">
+      <DependentUpon>RoyContractSubRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyContractSubRates.aspx.designer.cs">
+      <DependentUpon>RoyContractSubRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\CustomerMaintenance.aspx.cs">
+      <DependentUpon>CustomerMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\CustomerMaintenance.aspx.designer.cs">
+      <DependentUpon>CustomerMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ExceptionPage.aspx.cs">
+      <DependentUpon>ExceptionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ExceptionPage.aspx.designer.cs">
+      <DependentUpon>ExceptionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\PaymentExchangeRates.aspx.cs">
+      <DependentUpon>PaymentExchangeRates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\ExchangeRateFactors.aspx.cs">
+      <DependentUpon>ExchangeRateFactors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\ExchangeRateFactors.aspx.designer.cs">
+      <DependentUpon>ExchangeRateFactors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Impersonator.cs" />
+    <Compile Include="DataMaintenance\InterestedPartyMaintenance.aspx.cs">
+      <DependentUpon>InterestedPartyMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\InterestedPartyMaintenance.aspx.designer.cs">
+      <DependentUpon>InterestedPartyMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\LabelMaintenance.aspx.cs">
+      <DependentUpon>LabelMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\LabelMaintenance.aspx.designer.cs">
+      <DependentUpon>LabelMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MenuScreen.aspx.cs">
+      <DependentUpon>MenuScreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\MenuScreen.aspx.designer.cs">
+      <DependentUpon>MenuScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\MissingParticipants.aspx.cs">
+      <DependentUpon>MissingParticipants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\MissingParticipants.aspx.designer.cs">
+      <DependentUpon>MissingParticipants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\OptionPeriodLinks.aspx.cs">
+      <DependentUpon>OptionPeriodLinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\OptionPeriodLinks.aspx.designer.cs">
+      <DependentUpon>OptionPeriodLinks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\OwnerAudit.aspx.cs">
+      <DependentUpon>OwnerAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\OwnerAudit.aspx.designer.cs">
+      <DependentUpon>OwnerAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\OwnerMaintenance.aspx.cs">
+      <DependentUpon>OwnerMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\OwnerMaintenance.aspx.designer.cs">
+      <DependentUpon>OwnerMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\ParticipantMaintenance.aspx.cs">
+      <DependentUpon>ParticipantMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\ParticipantMaintenance.aspx.designer.cs">
+      <DependentUpon>ParticipantMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\ParticipantSummary.aspx.cs">
+      <DependentUpon>ParticipantSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\ParticipantSummary.aspx.designer.cs">
+      <DependentUpon>ParticipantSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\SalesTypeGroupMaintenance.aspx.cs">
+      <DependentUpon>SalesTypeGroupMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\SalesTypeGroupMaintenance.aspx.designer.cs">
+      <DependentUpon>SalesTypeGroupMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataMaintenance\ResponsibilityMaintenance.aspx.cs">
+      <DependentUpon>ResponsibilityMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\ResponsibilityMaintenance.aspx.designer.cs">
+      <DependentUpon>ResponsibilityMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\PaymentExchangeRates.aspx.designer.cs">
+      <DependentUpon>PaymentExchangeRates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatementProcessing\WorkFlowCommentRichText.aspx.cs">
+      <DependentUpon>WorkFlowCommentRichText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\WorkFlowCommentRichText.aspx.designer.cs">
+      <DependentUpon>WorkFlowCommentRichText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RoyaltorActivity.ascx.cs">
+      <DependentUpon>RoyaltorActivity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RoyaltorActivity.ascx.designer.cs">
+      <DependentUpon>RoyaltorActivity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="StatementProcessing\RoyaltorActivity.aspx.cs">
+      <DependentUpon>RoyaltorActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\RoyaltorActivity.aspx.designer.cs">
+      <DependentUpon>RoyaltorActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyaltorContract.aspx.cs">
+      <DependentUpon>RoyaltorContract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyaltorContract.aspx.designer.cs">
+      <DependentUpon>RoyaltorContract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\RoyaltorCosts.aspx.cs">
+      <DependentUpon>RoyaltorCosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\RoyaltorCosts.aspx.designer.cs">
+      <DependentUpon>RoyaltorCosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\RoyaltorGroupings.aspx.cs">
+      <DependentUpon>RoyaltorGroupings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\RoyaltorGroupings.aspx.designer.cs">
+      <DependentUpon>RoyaltorGroupings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\RoyaltorReserves.aspx.cs">
+      <DependentUpon>RoyaltorReserves.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\RoyaltorReserves.aspx.designer.cs">
+      <DependentUpon>RoyaltorReserves.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RoyaltorSearch.aspx.cs">
+      <DependentUpon>RoyaltorSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contract\RoyaltorSearch.aspx.designer.cs">
+      <DependentUpon>RoyaltorSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatementProcessing\RoyaltorStatementChanges.aspx.cs">
+      <DependentUpon>RoyaltorStatementChanges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\RoyaltorStatementChanges.aspx.designer.cs">
+      <DependentUpon>RoyaltorStatementChanges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\SalesTypeSearch.aspx.cs">
+      <DependentUpon>SalesTypeSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\SalesTypeSearch.aspx.designer.cs">
+      <DependentUpon>SalesTypeSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatementProcessing\StatementProcess.aspx.cs">
+      <DependentUpon>StatementProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\StatementProcess.aspx.designer.cs">
+      <DependentUpon>StatementProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatementProcessing\StmtProgressDashboard.aspx.cs">
+      <DependentUpon>StmtProgressDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\StmtProgressDashboard.aspx.designer.cs">
+      <DependentUpon>StmtProgressDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\TerritoryGroup.aspx.cs">
+      <DependentUpon>TerritoryGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\TerritoryGroup.aspx.designer.cs">
+      <DependentUpon>TerritoryGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\TerritorySearch.aspx.cs">
+      <DependentUpon>TerritorySearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\TerritorySearch.aspx.designer.cs">
+      <DependentUpon>TerritorySearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Participants\TrackListing.aspx.cs">
+      <DependentUpon>TrackListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Participants\TrackListing.aspx.designer.cs">
+      <DependentUpon>TrackListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatementProcessing\TransactionRetrieval.aspx.cs">
+      <DependentUpon>TransactionRetrieval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\TransactionRetrieval.aspx.designer.cs">
+      <DependentUpon>TransactionRetrieval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatementProcessing\TransactionRetrievalStatus.aspx.cs">
+      <DependentUpon>TransactionRetrievalStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\TransactionRetrievalStatus.aspx.designer.cs">
+      <DependentUpon>TransactionRetrievalStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataMaintenance\UserAccountMaint.aspx.cs">
+      <DependentUpon>UserAccountMaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataMaintenance\UserAccountMaint.aspx.designer.cs">
+      <DependentUpon>UserAccountMaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MessageBoxControl.ascx.cs">
+      <DependentUpon>MessageBoxControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MessageBoxControl.ascx.designer.cs">
+      <DependentUpon>MessageBoxControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Utilities.cs" />
+    <Compile Include="StatementProcessing\WorkFlow.aspx.cs">
+      <DependentUpon>WorkFlow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatementProcessing\WorkFlow.aspx.designer.cs">
+      <DependentUpon>WorkFlow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SupplierAddressOverwrite.ascx.cs">
+      <DependentUpon>SupplierAddressOverwrite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SupplierAddressOverwrite.ascx.designer.cs">
+      <DependentUpon>SupplierAddressOverwrite.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Audit\ArtistAudit.aspx" />
+    <Content Include="Audit\AutoParticipantAudit.aspx" />
+    <Content Include="Audit\AutoParticipantMaintAudit.aspx" />
+    <Content Include="Audit\CatalogueDetailsAudit.aspx" />
+    <Content Include="Audit\ConfigurationGroupAudit.aspx" />
+    <Content Include="Audit\InterestedPartyAudit.aspx" />
+    <Content Include="Audit\RoyaltorGroupingAudit.aspx" />
+    <Content Include="Audit\ParticipantAudit.aspx" />
+    <Content Include="Audit\RoyaltorEscalationRatesAudit.aspx" />
+    <Content Include="Audit\RoyaltorPackagingRatesAudit.aspx" />
+    <Content Include="Audit\RoyaltorPayeeAudit.aspx" />
+    <Content Include="Audit\RoyaltorPayeeSuppAudit.aspx" />
+    <Content Include="Audit\RoyaltorRatesAudit.aspx" />
+    <Content Include="Audit\RoyaltorSubsidiaryRatesAudit.aspx" />
+    <Content Include="Audit\TerritoryGroupAudit.aspx" />
+    <Content Include="Common\WARSAffiliates.aspx" />
+    <Content Include="Contract\NotesRichTextBox.aspx" />
+    <Content Include="Contract\RoyContractEscHistory.aspx" />
+    <Content Include="Contract\RoyContractPayeeSupp.aspx" />
+    <Content Include="Contract\RoyContractTaxDetails.aspx" />
+    <Content Include="DataMaintenance\ArtistResponsibilityMaintenance.aspx" />
+    <Content Include="DataMaintenance\StatementTextMaintenance.aspx" />
+    <Content Include="DataMaintenance\TaxRateMaintanance.aspx" />
+    <Content Include="DataMaintenance\TransactionMaintenance.aspx" />
+    <Content Include="DataMaintenance\RoyaltorBalance.aspx" />
+    <Content Include="DataMaintenance\TerritoryGroupRoyaltors.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\audit.png" />
+    <Content Include="Images\autosignoff.png" />
+    <Content Include="Images\bg4.png" />
+    <Content Include="Images\FileDownload.png" />
+    <Content Include="Images\Lock.png" />
+    <Content Include="Images\Map.jpg" />
+    <Content Include="Images\Sort_down.png" />
+    <Content Include="Images\Sort_up.png" />
+    <Content Include="Images\UpArrow.png" />
+    <Content Include="NotesOverview\NotesOverview.aspx" />
+    <Content Include="Participants\AutoParticipantMaintenance.aspx" />
+    <Content Include="Participants\AutoParticipantSearch.aspx" />
+    <Content Include="Participants\CatalogueNotes.aspx" />
+    <Content Include="Participants\CatalogueNotesRichTextBox.aspx" />
+    <Content Include="Payment\PaymentApproval.aspx" />
+    <Content Include="Payment\PaymentDetails.aspx" />
+    <Content Include="Payment\SupplierAddressOverwrite.aspx" />
+    <Content Include="DataMaintenance\AccountTypeMaintenance.aspx" />
+    <Content Include="Services\FuzzySearch.asmx" />
+    <Content Include="StatementProcessing\AdHocStatement.aspx" />
+    <Content Include="Reporting\BOReports.aspx" />
+    <Content Include="DataMaintenance\BreakdownGroupMaintenance.aspx" />
+    <Content Include="Participants\CatalogueMaintenance.aspx" />
+    <Content Include="Participants\CatalogueSearch.aspx" />
+    <Content Include="Audit\CompanyAudit.aspx" />
+    <Content Include="DataMaintenance\CompanyMaintenance.aspx" />
+    <Content Include="DataMaintenance\ConfigurationGrouping.aspx" />
+    <Content Include="DataMaintenance\ConfigurationSearch.aspx" />
+    <Content Include="Contract\ContractHdrLinkButtons.ascx" />
+    <Content Include="Contract\ContractNavigationButtons.ascx" />
+    <Content Include="Audit\RoyContractAudit.aspx" />
+    <Content Include="Contract\RoyContractEscRates.aspx" />
+    <Content Include="Contract\RoyContractGrouping.aspx" />
+    <Content Include="Contract\RoyContractNotes.aspx" />
+    <Content Include="Contract\RoyContractOptionPeriods.aspx" />
+    <Content Include="Contract\RoyContractPayee.aspx" />
+    <Content Include="Contract\RoyContractPkgRates.aspx" />
+    <Content Include="Contract\RoyContractRoyRates.aspx" />
+    <Content Include="Contract\RoyContractSubRates.aspx" />
+    <Content Include="DataMaintenance\CustomerMaintenance.aspx" />
+    <Content Include="Common\ExceptionPage.aspx" />
+    <Content Include="Payment\PaymentExchangeRates.aspx" />
+    <Content Include="StatementProcessing\ExchangeRateFactors.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Add.gif" />
+    <Content Include="Images\add_row.png" />
+    <Content Include="Images\bg2.png" />
+    <Content Include="Images\bg2_new.png" />
+    <Content Include="Images\bg3.png" />
+    <Content Include="Images\bg5.png" />
+    <Content Include="Images\cancel_row3.png" />
+    <Content Include="Images\CloseIcon.png" />
+    <Content Include="Images\Comment_without_lines.png" />
+    <Content Include="Images\Comment_with_lines.png" />
+    <Content Include="Images\Copy.png" />
+    <Content Include="Images\Delete.gif" />
+    <Content Include="Images\groupIn.png" />
+    <Content Include="Images\groupOut.png" />
+    <Content Include="Images\InProgress2.gif" />
+    <Content Include="Images\InProgress3.gif" />
+    <Content Include="Images\InProgress4.gif" />
+    <Content Include="Images\InProgress5.gif" />
+    <Content Include="Images\message_logos.png" />
+    <Content Include="Images\Minus.gif" />
+    <Content Include="Images\mur-logo_trim - Copy.png" />
+    <Content Include="Images\mur-logo_trim.png" />
+    <Content Include="Images\newrow.png" />
+    <Content Include="Images\Plus.gif" />
+    <Content Include="Images\report_icon1 - Copy.png" />
+    <Content Include="Images\report_icon1.png" />
+    <Content Include="Images\Retry.jpg" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\search.PNG" />
+    <Content Include="Images\textbox_loader.gif" />
+    <Content Include="Images\Warning.png" />
+    <Content Include="DataMaintenance\InterestedPartyMaintenance.aspx" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="DataMaintenance\LabelMaintenance.aspx" />
+    <Content Include="Common\MenuScreen.aspx" />
+    <Content Include="Participants\MissingParticipants.aspx" />
+    <Content Include="DataMaintenance\OptionPeriodLinks.aspx" />
+    <Content Include="Audit\OwnerAudit.aspx" />
+    <Content Include="DataMaintenance\OwnerMaintenance.aspx" />
+    <Content Include="Participants\ParticipantMaintenance.aspx" />
+    <Content Include="Participants\ParticipantSummary.aspx" />
+    <Content Include="DataMaintenance\SalesTypeGroupMaintenance.aspx" />
+    <Content Include="DataMaintenance\ResponsibilityMaintenance.aspx" />
+    <Content Include="StatementProcessing\WorkFlowCommentRichText.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="UserControls\RoyaltorActivity.ascx" />
+    <Content Include="StatementProcessing\RoyaltorActivity.aspx" />
+    <Content Include="Contract\RoyaltorContract.aspx" />
+    <Content Include="DataMaintenance\RoyaltorCosts.aspx" />
+    <Content Include="DataMaintenance\RoyaltorGroupings.aspx" />
+    <Content Include="DataMaintenance\RoyaltorReserves.aspx" />
+    <Content Include="Contract\RoyaltorSearch.aspx" />
+    <Content Include="StatementProcessing\RoyaltorStatementChanges.aspx" />
+    <Content Include="DataMaintenance\SalesTypeSearch.aspx" />
+    <Content Include="StatementProcessing\StatementProcess.aspx" />
+    <Content Include="StatementProcessing\StmtProgressDashboard.aspx" />
+    <Content Include="StyleSheet.css" />
+    <Content Include="DataMaintenance\TerritoryGroup.aspx" />
+    <Content Include="DataMaintenance\TerritorySearch.aspx" />
+    <Content Include="Participants\TrackListing.aspx" />
+    <Content Include="StatementProcessing\TransactionRetrieval.aspx" />
+    <Content Include="StatementProcessing\TransactionRetrievalStatus.aspx" />
+    <Content Include="DataMaintenance\UserAccountMaint.aspx" />
+    <Content Include="UserControls\MessageBoxControl.ascx" />
+    <Content Include="StatementProcessing\WorkFlow.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+    <Content Include="UserControls\SupplierAddressOverwrite.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Common\SessionAliveHandler.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49543</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:92/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

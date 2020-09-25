@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E4DFEBC-8929-4932-B7C9-DCFC3CD727A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WARS.DataAccessLayer</RootNamespace>
+    <AssemblyName>DataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>    
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IDAL">
+      <HintPath>..\IDAL\bin\Debug\IDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.4.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Oracle\product\11.2.0\client_1\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountTypeMaintenanceDAL.cs" />
+    <Compile Include="ArtistResponsibilityMaintenanceDAL.cs" />
+    <Compile Include="AutoParticipantAuditDAL.cs" />
+    <Compile Include="AutoParticipantMaintAuditDAL.cs" />
+    <Compile Include="AutoParticipantMaintenanceDAL.cs" />
+    <Compile Include="AutoParticipantSearchDAL.cs" />
+    <Compile Include="BreakdownGroupMaintenanceDAL.cs" />
+    <Compile Include="CatalogueDetailsAuditDAL.cs" />
+    <Compile Include="CatalogueMaintenanceDAL.cs" />
+    <Compile Include="CatalogueNotesDAL.cs" />
+    <Compile Include="CatalogueSearchDAL.cs" />
+    <Compile Include="CompanyAuditDAL.cs" />
+    <Compile Include="CompanyMaintenanceDAL.cs" />
+    <Compile Include="ConfigurationGroupingDAL.cs" />
+    <Compile Include="ConfigurationSearchDAL.cs" />
+    <Compile Include="ConnectionDAL.cs" />
+    <Compile Include="CommonDAL.cs" />
+    <Compile Include="AdHocStatementDAL.cs" />
+    <Compile Include="ConfigurationGroupAuditDAL.cs" />
+    <Compile Include="ArtistAuditDAL.cs" />
+    <Compile Include="FuzzySearchDAL.cs" />
+    <Compile Include="InterestedPartyAuditDAL.cs" />
+    <Compile Include="NotesOverviewDAL.cs" />
+    <Compile Include="RoyContractTaxDetailsDAL.cs" />
+    <Compile Include="StatementTextMaintenanceDAL.cs" />
+    <Compile Include="TaxRateMaintananceDAL.cs" />
+    <Compile Include="TransactionMaintenanceDAL.cs" />
+    <Compile Include="PaymentExchangeRatesDAL.cs" />
+    <Compile Include="BOReportsDAL.cs" />
+    <Compile Include="RoyaltorGroupingAuditDAL.cs" />
+    <Compile Include="ParticipantAuditDAL.cs" />
+    <Compile Include="RoyaltorBalanceDAL.cs" />
+    <Compile Include="RoyContractNotesDAL.cs" />
+    <Compile Include="PaymentApprovalDAL.cs" />
+    <Compile Include="PaymentDetailsDAL.cs" />
+    <Compile Include="RoyaltorEscalationRatesAuditDAL.cs" />
+    <Compile Include="RoyaltorPackagingRatesAuditDAL.cs" />
+    <Compile Include="RoyaltorPayeeAuditDAL.cs" />
+    <Compile Include="RoyaltorPayeeSuppAuditDAL.cs" />
+    <Compile Include="RoyaltorRatesAuditDAL.cs" />
+    <Compile Include="RoyaltorSubsidiaryRatesAuditDAL.cs" />
+    <Compile Include="RoyContractPayeeSuppDAL.cs" />
+    <Compile Include="RoyContractEscHistoryDAL.cs" />
+    <Compile Include="ParticipantSummaryDAL.cs" />
+    <Compile Include="ParticipantMaintenanceDAL.cs" />
+    <Compile Include="RoyContractRoyGroupingDAL.cs" />
+    <Compile Include="SupplierAddressOverwriteDAL.cs" />
+    <Compile Include="TerritoryGroupAuditDAL.cs" />
+    <Compile Include="TerritoryGroupRoyaltorsDAL.cs" />
+    <Compile Include="TrackListingDAL.cs" />
+    <Compile Include="CustomerMaintenanceDAL.cs" />
+    <Compile Include="ExchangeRateFactorsDAL.cs" />
+    <Compile Include="MissingParticipantsDAL.cs" />
+    <Compile Include="RoyContractEscRatesDAL.cs" />
+    <Compile Include="RoyContractPkgRatesDAL.cs" />
+    <Compile Include="RoyContractSubRatesDAL.cs" />
+    <Compile Include="OwnerAuditDAL.cs" />
+    <Compile Include="ResponsibilityMaintenanceDAL.cs" />
+    <Compile Include="RoyContractAuditDAL.cs" />
+    <Compile Include="RoyContractBankDAL.cs" />
+    <Compile Include="RoyContractOptionPeriodsDAL.cs" />
+    <Compile Include="RoyContractPayeeDAL.cs" />
+    <Compile Include="RoyaltorContractDAL.cs" />
+    <Compile Include="InterestedPartyMaintenanceDAL.cs" />
+    <Compile Include="LabelMaintenanceDAL.cs" />
+    <Compile Include="RoyaltorSearchDAL.cs" />
+    <Compile Include="OwnerMaintenanceDAL.cs" />
+    <Compile Include="RoyContractRoyRatesDAL.cs" />
+    <Compile Include="SalesTypeGroupingDAL.cs" />
+    <Compile Include="SalesTypeSearchDAL.cs" />
+    <Compile Include="TransactionRetrievalDAL.cs" />
+    <Compile Include="SellerGroupDAL.cs" />
+    <Compile Include="TerritorySearchDAL.cs" />
+    <Compile Include="TransactionRetrievalStatusDAL.cs" />
+    <Compile Include="UserAccountMaintDAL.cs" />
+    <Compile Include="OptionPeriodLinksDAL.cs" />
+    <Compile Include="RoyaltorGroupingsDAL.cs" />
+    <Compile Include="RoyaltorReservesDAL.cs" />
+    <Compile Include="StmtProgressDashboardDAL.cs" />
+    <Compile Include="RoyaltorCostsDAL.cs" />
+    <Compile Include="RoyaltorStatementDAL.cs" />
+    <Compile Include="StatementRunDAL.cs" />
+    <Compile Include="LoginDAL.cs" />
+    <Compile Include="RoyaltorActivityDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkFlowDAL.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,40 @@
+Benelux:
+CentralEurope:
+CzechRepublic:
+Denmark:
+Finland:
+Italy:
+MiddleEast:
+Norway:
+Poland:
+Portugal:
+Russia:
+SouthAfrica:
+Spain:
+Sweden:
+UKADA:
+UKERATO:
+UKGB:
+UKNVC:
+UKPLG:
+UKTELDEC:
+UKWEA:
+AustraliaNZ:
+China:
+HongKkong:
+Indonesia:
+Japan:
+Korea:
+Malaysia:
+Philippines:
+Singapore:
+Taiwan:
+Thailand:
+Argentina:
+Brazil:
+Canada:
+Latina:
+Mexico:
+DEV:Data Source=WARSD14.WORLD;User Id=WARSE;Password=warse
+UAT:Data Source=WARSU14.WORLD;User Id=WARSE;Password=warse
+QA:Data Source=WARSQ14.WORLD;User Id=WARSE;Password=warse

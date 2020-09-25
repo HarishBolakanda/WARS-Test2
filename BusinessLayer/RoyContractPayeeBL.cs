@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using WARS.DataAccessLayer;
+using WARS.IBusiness;
+using WARS.IDAL;
+
+
+namespace WARS.BusinessLayer
+{
+    public class RoyContractPayeeBL : IRoyContractPayeeBL
+    {
+        IRoyContractPayeeDAL royContractPayeeDAL;
+        #region Constructor
+        public RoyContractPayeeBL()
+        {
+            royContractPayeeDAL = new RoyContractPayeeDAL();
+        }
+        #endregion Constructor
+
+        public DataSet GetPayeeData(string royaltorId, out string royaltor, out Int32 iErrorId)
+        {
+            return royContractPayeeDAL.GetPayeeData(royaltorId, out royaltor, out iErrorId);
+        }
+
+        public DataSet GetIntPartySearchList(string intPartyType, string intPartyName, string intPartyIds, out Int32 iErrorId)
+        {
+            return royContractPayeeDAL.GetIntPartySearchList(intPartyType, intPartyName, intPartyIds, out iErrorId);
+        }
+
+        public DataSet SavePayee(string royaltorId, Array payeeList, Array deleteList, string loggedUser, out string royaltor, out Int32 iErrorId)
+        {
+            return royContractPayeeDAL.SavePayee(royaltorId, payeeList, deleteList, loggedUser, out royaltor, out iErrorId);
+        }
+
+        public void AddInterestedParty(string partyType, string partyName, string address1, string address2, string address3, string address4, string postCode, string email, string VATNum, string taxType, string generateInvoice,
+            string loggedUser, out string intPartyId, out string ipNumber, out Int32 iErrorId)
+        {
+            royContractPayeeDAL.AddInterestedParty(partyType, partyName, address1, address2, address3, address4, postCode, email, VATNum, taxType, generateInvoice, loggedUser, out intPartyId, out ipNumber, out iErrorId);
+        }
+
+
+    }
+}

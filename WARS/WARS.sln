@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WARS", "WARS\WARS.csproj", "{96CD7C65-D857-451C-B826-DA166CD9F851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{058FC382-5515-474F-8B4F-38012353ED8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{5E4DFEBC-8929-4932-B7C9-DCFC3CD727A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBusiness", "IBusiness\IBusiness.csproj", "{1CCB2769-4393-4099-BCB6-FAC62639D2B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDAL", "IDAL\IDAL.csproj", "{FF1C8823-ED3E-4450-BFCC-90F8E42DE26C}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://ukldn930:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BusinessLayer\\BusinessLayer.csproj
+		SccProjectName1 = BusinessLayer
+		SccLocalPath1 = BusinessLayer
+		SccProjectUniqueName2 = DataAccessLayer\\DataAccessLayer.csproj
+		SccProjectName2 = DataAccessLayer
+		SccLocalPath2 = DataAccessLayer
+		SccProjectUniqueName3 = IBusiness\\IBusiness.csproj
+		SccProjectName3 = IBusiness
+		SccLocalPath3 = IBusiness
+		SccProjectUniqueName4 = IDAL\\IDAL.csproj
+		SccProjectName4 = IDAL
+		SccLocalPath4 = IDAL
+		SccProjectUniqueName5 = WARS\\WARS.csproj
+		SccProjectName5 = WARS
+		SccLocalPath5 = WARS
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96CD7C65-D857-451C-B826-DA166CD9F851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CD7C65-D857-451C-B826-DA166CD9F851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CD7C65-D857-451C-B826-DA166CD9F851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CD7C65-D857-451C-B826-DA166CD9F851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{058FC382-5515-474F-8B4F-38012353ED8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{058FC382-5515-474F-8B4F-38012353ED8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{058FC382-5515-474F-8B4F-38012353ED8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{058FC382-5515-474F-8B4F-38012353ED8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E4DFEBC-8929-4932-B7C9-DCFC3CD727A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E4DFEBC-8929-4932-B7C9-DCFC3CD727A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E4DFEBC-8929-4932-B7C9-DCFC3CD727A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E4DFEBC-8929-4932-B7C9-DCFC3CD727A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CCB2769-4393-4099-BCB6-FAC62639D2B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CCB2769-4393-4099-BCB6-FAC62639D2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CCB2769-4393-4099-BCB6-FAC62639D2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CCB2769-4393-4099-BCB6-FAC62639D2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1C8823-ED3E-4450-BFCC-90F8E42DE26C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1C8823-ED3E-4450-BFCC-90F8E42DE26C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1C8823-ED3E-4450-BFCC-90F8E42DE26C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1C8823-ED3E-4450-BFCC-90F8E42DE26C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

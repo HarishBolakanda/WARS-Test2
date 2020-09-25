@@ -1,0 +1,896 @@
+﻿
+.Hyperlink {
+    color: #3333cc;
+    text-decoration: none;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+}
+
+.Hyperlink_largeFont {
+    color: #3333cc;
+    text-decoration: none;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 13px;
+}
+
+    .Hyperlink_largeFont:hover {
+        color: #ffffff !important;
+        text-decoration: none;
+        font-family: Calibri, Verdana, Arial, Serif;
+        font-size: 13px;
+    }
+
+.ScreenName {
+    background-image: url(../Images/bg5.png);
+    background-repeat: repeat-x;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Calibri, Verdana, Arial, Serif;
+}
+
+.progressBar {
+    background-color: #c0c0c0;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 100002 !important;
+}
+
+.popupBox {
+    background-color: #c0c0c0;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.messageBackground {
+    background-color: #c0c0c0;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 100001 !important;
+}
+
+.gridStyle_hover {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    background-color: white;
+}
+
+    .gridStyle_hover tr.dataRow:hover {
+        color: #ffffff !important;
+        background-image: url(../Images/bg5.png);
+        background-repeat: repeat;
+    }
+
+
+.gridStyle {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    background-color: white;
+}
+
+.gridRowStyle :hover {
+    color: #ffffff !important;
+    font-weight: bold;
+    background-image: url(../Images/bg5.png);
+    background-repeat: repeat;
+}
+
+.gridItemStyle_Center_Align {
+    padding-left: 3px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    /*vertical-align: top;*/
+    vertical-align: middle;
+}
+
+.gridItemStyle_Right_Align {
+    text-align: right;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    /*vertical-align: top;*/
+    vertical-align: middle;
+    padding-right: 3px;
+}
+
+.gridItemStyle_Left_Align {
+    padding-left: 3px;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    /*vertical-align: top;*/
+    vertical-align: middle;
+    /*padding-right: 10px;*/
+}
+
+.gridItemStyle_Left_Align_Padding {
+    padding-left: 10px;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    vertical-align: middle;
+    /*padding-right: 10px;*/
+}
+
+.gridItemStyle_Left_Align_No_Padding {
+    padding-left: 3px;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    vertical-align: middle;
+}
+
+/*used in Payment approval screen grid*/
+.gridItemStyle_No_Border {
+    border-style: none;
+    background-color: white;
+}
+
+.gridHeaderStyle_2rows {
+    border: solid 1px #C6D7ED;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    background-image: url(../Images/bg3.png);
+    text-align: center;
+    position: fixed;
+    background-repeat: repeat;
+    height: 25px;
+}
+
+.gridHeaderStyle_1row {
+    border: solid 1px #C6D7ED;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    background-image: url(../Images/bg3.png);
+    text-align: center;
+    position: fixed;
+    background-repeat: repeat;
+    height: 25px;
+}
+
+.gridHeaderStyle_1row_Left_Align {
+    border: solid 1px #C6D7ED;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    background-image: url(../Images/bg3.png);
+    text-align: left;
+    position: fixed;
+    background-repeat: repeat;
+    height: 25px;
+}
+
+.gridHeaderStyle_3rows {
+    border: solid 1px #C6D7ED;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    background-image: url(../Images/bg4.png);       
+    text-align: center;
+    position: fixed;   
+    background-repeat: repeat;
+    height: 25px;
+}
+
+
+.gridEmptyDataRowStyle {
+    font-size: 14px;
+    font-family: Calibri, Verdana, arial, Serif;
+    text-align: center;
+}
+
+.costGridHeaderrowStyle {
+    padding-left: 3px;
+    text-align: center;
+    font: bold;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    /*background-color:#668cff;*/
+    background-color: #BBCCFF;
+    padding-right: 10px;
+}
+
+.GridHeaderLargeFont {
+    border: solid 1px #C6D7ED;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    background-image: url(../Images/bg2_new.png);
+    text-align: center;
+    position: fixed;
+    background-repeat: repeat;
+    height: auto;
+}
+
+.dashboardGridText {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 13px;
+}
+
+.dashBoardScrnGroupHeader {
+    background-color: #BBCCFF;
+    padding-left: 3px;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    vertical-align: middle;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dashBoardScrnTotalRow_Text {
+    background-color: #E3EFFF;
+    text-align: right;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    vertical-align: middle;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding-right: 5%;
+}
+
+.dashBoardScrnTotalRow_Center_Align {
+    background-color: #E3EFFF;
+    padding-left: 3px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    vertical-align: middle;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dashBoardScrnTotalRow_Right_Align {
+    background-color: #E3EFFF;
+    text-align: right;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    vertical-align: middle;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding-right: 3px;
+}
+
+.dashBoardScrnGrandTotalRow_Center_Align {
+    background-color: #cae0ff;
+    padding-left: 3px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    vertical-align: middle;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dashBoardScrnGrandTotalRow_Text {
+    background-color: #cae0ff;
+    text-align: right;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    vertical-align: middle;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding-right: 5%;
+}
+
+.dashBoardScrnGrandTotalRow_Right_Align {
+    background-color: #cae0ff;
+    text-align: right;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C6D7ED;
+    vertical-align: middle;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding-right: 3px;
+}
+
+.identifierLable {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+}
+
+.identifierLable_large {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 14px;
+}
+
+    .identifierLable_large a {
+        text-decoration: none;
+    }
+
+.identifierLable_large_bold {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.waterMarkText {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    /*color:#d0d0d0;*/
+    color: #808080;
+}
+
+.errorMessage {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    color: red;
+}
+
+.gridTextField {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.requiredFieldValidator {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 14px;
+    color: red;
+}
+
+.ddlStyle {
+    font-family: Calibri, Verdana, arial, Serif;
+    font-size: 12px;
+    z-index: 0;
+    height: 20px;
+    /*Added to overcome the issue of overlapping of dropdowns in Power Builder*/
+    /*position: relative;
+    z-index: 9999;*/
+}
+
+
+.editFrontSheetButton {
+    height: 20px;
+    width: auto;
+}
+
+.ButtonStyle {
+    font-family: Calibri, Verdana, arial, Serif;
+    font-size: 14px;
+    width: auto;
+    font-weight: bold;
+}
+
+.LinkButtonStyle {
+    font-family: Calibri, Verdana, arial, Serif;
+    font-size: 14px;
+    width: auto;
+    font-weight: bold;
+    /*background-color: #BBCCFF;*/
+    background-color: #B8CCE4;
+    border: solid;
+    border-width: 1px;
+}
+
+.FileUpload {
+    font-family: Calibri, Verdana, arial, Serif;
+    font-size: 14px;
+    border: solid;
+    border-width: 1px;
+}
+
+.ErrorLabelHidden {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.ErrorLabelVisible {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    visibility: visible;
+    color: red;
+}
+
+.GridButtonStyle {
+    font-family: Calibri, Verdana, arial, Serif;
+    font-size: 12px;
+    height: 20px;
+}
+
+.GridSortButton {
+    font-family: Calibri, Verdana, arial, Serif;
+    font-size: 14px;
+    width: auto;
+    background-image: url(../Images/bg3.png);
+    height: auto;
+    font-weight: bold;
+    border: solid 1px #C6D7ED;
+    position: relative;
+    cursor: pointer;
+    height: 30px;
+}
+
+.gridPager {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 14px;
+}
+
+.gridTitle {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    background-color: #BBCCFF;
+}
+
+.gridTitle_Bold {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #B8CCE4;
+    height: 20px;
+}
+
+.gridRowSelected {
+    background-color: #99b8fa;
+    font-weight: bold;
+}
+
+/*Menu screen - start*/
+
+.MenuScrn_Header {
+    background-color: #BBCCFF;
+    border: solid 1px #C6D7ED;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    text-align: center;
+    position: fixed;
+    height: auto;
+}
+
+.MenuScrn_MenuItem {
+    border: solid 1px #C6D7ED;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    background-image: url(../Images/bg2_new.png);
+    text-align: center;
+    position: fixed;
+    background-repeat: repeat;
+    height: auto;
+    padding: 5px;
+    cursor: pointer;
+}
+
+    .MenuScrn_MenuItem:hover {
+        color: #ffffff;
+        background-image: url(../Images/bg5.png);
+        background-repeat: repeat;
+        cursor: pointer;
+    }
+
+.MenuScrn_MenuItem_Hover {
+    color: #ffffff;
+    border: solid 1px #C6D7ED;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    background-image: url(../Images/bg5.png);
+    text-align: center;
+    position: fixed;
+    background-repeat: repeat;
+    height: auto;
+    padding: 5px;
+    cursor: default;
+}
+
+.MenuScrn_SubMenu_Panel {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    background-color: white;
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 0px;
+}
+
+.MenuScrn_SubMenu_table {
+    width: auto;
+    border-collapse: collapse;
+}
+
+    .MenuScrn_SubMenu_table tr {
+        background: #E3EFFF;
+    }
+
+        .MenuScrn_SubMenu_table tr:hover {
+            background-image: url(../Images/bg5.png);
+            background-repeat: repeat;
+            cursor: pointer;
+        }
+
+    .MenuScrn_SubMenu_table td {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        text-align: center;
+        border: #cae0ff 1px solid;
+        font-family: Calibri, Verdana, Arial, Serif;
+        font-size: 13px;
+        color: black;
+    }
+
+        .MenuScrn_SubMenu_table td:hover {
+            color: #ffffff;
+        }
+
+/*Menu screen - end*/
+
+/*Landing screen - start*/
+
+.LandingScrn_Header {
+    background-color: #BBCCFF;
+    border: solid 1px #C6D7ED;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    text-align: center;
+    position: fixed;
+    height: auto;
+}
+
+.LandingScrn_MenuItem {
+    border: solid 1px #C6D7ED;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    background-image: url(../Images/bg2_new.png);
+    text-align: center;
+    position: fixed;
+    background-repeat: repeat;
+    height: auto;
+    padding: 5px;
+    cursor: pointer;
+}
+
+    .LandingScrn_MenuItem:hover {
+        color: #ffffff;
+        background-image: url(../Images/bg5.png);
+        background-repeat: repeat;
+        cursor: pointer;
+    }
+
+.LandingScrn_MenuItem_Hover {
+    color: #ffffff;
+    border: solid 1px #C6D7ED;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Calibri, Verdana, arial, Serif;
+    background-image: url(../Images/bg5.png);
+    text-align: center;
+    position: fixed;
+    background-repeat: repeat;
+    height: auto;
+    padding: 5px;
+    cursor: default;
+}
+
+.LandingScrn_SubMenu_Panel {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    background-color: white;
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 0px;
+}
+
+
+.LandingScrn_SubMenu_table {
+    width: auto;
+    border-collapse: collapse;
+}
+
+    .LandingScrn_SubMenu_table tr {
+        background-image: url(../Images/bg2_new.png);
+    }
+
+        .LandingScrn_SubMenu_table tr:hover {
+            background-image: url(../Images/bg5.png);
+            background-repeat: repeat;
+            cursor: pointer;
+        }
+
+    .LandingScrn_SubMenu_table td {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        border: #cae0ff 1px solid;
+        font-family: Calibri, Verdana, Arial, Serif;
+        font-size: 13px;
+        color: black;
+    }
+
+        .LandingScrn_SubMenu_table td:hover {
+            color: #ffffff;
+        }
+
+/*Landing screen - start*/
+
+.watermarked {
+    color: gray;
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+}
+
+.upper-case {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.Home_link {
+    /*background-color: #BBCCFF;*/
+    background-color: #B8CCE4;
+    /*border: solid 1px #C6D7ED;*/
+    border: solid 1px;
+    font-size: 14px;
+    font-family: Calibri, Verdana, arial, Serif;
+    text-align: center;
+    position: relative;
+    height: auto;
+    /*padding:2px;*/
+    top: 2px;
+    left: 0px;
+    bottom: 2px;
+    font-weight: bold;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    right: 2px;
+    height: 23px;
+}
+
+.ListBox {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    border: 1px solid black;
+}
+
+.FuzzySearch_Button {
+    background-image: url(../Images/bg2_new.png);
+    /*width:20px;
+    height:20px;*/
+    cursor: pointer;
+}
+
+
+/*.dropbtn {
+    font-family: Calibri, Verdana, arial, Serif;
+    font-size: 14px;
+    width: auto;
+    font-weight:bold;
+    background-color: #B8CCE4;
+    border:solid;
+    border-width:1px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0px;
+    background-color: #B8CCE4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align:center;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 4px 4px;
+    text-decoration: none;
+    display: block;
+    border:solid;
+    border-width:1px;
+    font-family: Calibri, Verdana, arial, Serif;
+    font-size: 14px;
+    font-weight:bold;
+}
+
+.dropdown-content a:hover {background-color: #8ba6c7}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+    .sidenav a {
+        padding-right: 30px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .sidenav a:hover, .offcanvas a:focus {
+            color: #f1f1f1;
+        }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        font-size: 36px;
+    }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+.textboxStyle {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    padding-left: 2px;
+    padding-right: 0;
+}
+
+.textboxStyle_readonly {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    /*font-weight:bold;*/
+    /*background-color:#E4E4E4;*/
+    background-color: #E3EFFF;
+    border: solid thin 1px;
+    padding-left: 2px;
+    padding-right: 0;
+}
+
+.textboxStyle_changedData {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    padding-left: 2px;
+    padding-right: 0;
+    color: red;
+}
+
+.textbox_FuzzySearch {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+    padding-left: 2px;
+    padding-right: 0;
+    /*border-radius:10px;*/
+    /*background-color:#EFF3FA;*/
+}
+
+.dropdownStyle {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 12px;
+}
+
+.pagerStyle {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 14px;
+}
+
+    .pagerStyle a {
+        text-decoration: none;
+    }
+
+.pagerStyle_Hover {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 14px;
+}
+
+    .pagerStyle_Hover a {
+        text-decoration: none;
+    }
+
+    .pagerStyle_Hover:hover a {
+        color: black;
+    }
+
+.table_with_border {
+    border: 1px solid #538dd5;
+}
+
+/* for maintaining constant spacing between table rows - Harish
+.content_table {
+
+}
+
+.content_table td {
+    padding-bottom:3px;
+}*/
+
+
+.table_header_with_border {
+    font-family: Calibri, Verdana, Arial, Serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #538dd5;
+}
+
+.insertBoxStyle {
+    border: solid 1px #C6D7ED;
+    padding-left: 3px;
+}
+
+.insertBoxStyle_No_Padding {
+    border: solid 1px #C6D7ED;
+}
+
+.popupPanel {
+    background-color: Window;
+    border: solid;
+    border-width: 1px;
+    border-color: #808080;
+    z-index: 1;
+    /*BorderColor:"#808080" ;BorderWidth:"1px" ;BorderStyle:"Solid" ;Style:"z-index: 1";*/
+}
+
+/*JIRA-746 Changes -- Start*/
+/* To freeze the header row*/
+.FixedHeader {
+    position: relative;
+    top: expression(this.parentNode.parentNode.parentNode.scrollTop-1);
+    bottom: expression(this.parentNode.parentNode.parentNode.scrollTop-1);
+    border: solid 1px #C6D7ED;
+    background-color: #C6D7ED;
+}
+/*JIRA-746 Changes -- End*/
+
+
+
+

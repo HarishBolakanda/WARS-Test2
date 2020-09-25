@@ -1,0 +1,59 @@
+WARSGB.WORLD=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = ukldn410.music.wmgis.com)(PORT = 1521))
+   )
+    (CONNECT_DATA =
+      (SERVICE_NAME = WARSGB)
+    )
+  )
+
+WARSTELDEC.WORLD=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = ukldn451.music.wmgis.com)(PORT = 1521))
+   )
+    (CONNECT_DATA =
+      (SERVICE_NAME = WARSTEL)
+    )
+  )
+
+WARSNVC.WORLD=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = ukldn451.music.wmgis.com)(PORT = 1521))
+   )
+    (CONNECT_DATA =
+      (SERVICE_NAME = WARSNVC)
+    )
+  )
+
+WARSERATO.WORLD=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = ukldn451.music.wmgis.com)(PORT = 1521))
+   )
+    (CONNECT_DATA =
+      (SERVICE_NAME = WARSERA)
+    )
+  )
+
+WARSWEA.WORLD=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = ukldn451.music.wmgis.com)(PORT = 1521))
+   )
+    (CONNECT_DATA =
+      (SERVICE_NAME = WARSWEA)
+    )
+  )
+
+WARSPLG.WORLD=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = ukldn412.music.wmgis.com)(PORT = 1521))
+   )
+    (CONNECT_DATA =
+      (SERVICE_NAME = WARSPLG)
+    )
+  )

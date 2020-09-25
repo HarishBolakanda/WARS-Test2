@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CCB2769-4393-4099-BCB6-FAC62639D2B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WARS.IBusiness</RootNamespace>
+    <AssemblyName>IBusiness</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>    
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAutoParticipantAuditBL.cs" />
+    <Compile Include="IAutoParticipantMaintAuditBL.cs" />
+    <Compile Include="IAutoParticipantMaintenanceBL.cs" />
+    <Compile Include="IAutoParticipantSearchBL.cs" />
+    <Compile Include="ICatalogueNotesBL.cs" />
+    <Compile Include="IFuzzySearchBL.cs" />
+    <Compile Include="IArtistAuditBL.cs" />
+    <Compile Include="IInterestedPartyAuditBL.cs" />
+    <Compile Include="INotesOverviewBL.cs" />
+    <Compile Include="IRoyContractTaxDetailsBL.cs" />
+    <Compile Include="IStatementTextMaintenanceBL.cs" />
+    <Compile Include="IConfigurationGroupAuditBL.cs" />
+    <Compile Include="ITaxRateMaintananceBL.cs" />
+    <Compile Include="ITransactionMaintenanceBL.cs" />
+    <Compile Include="IPaymentExchangeRatesBL.cs" />
+    <Compile Include="IBOReportsBL.cs" />
+    <Compile Include="IRoyaltorGroupingAuditBL.cs" />
+    <Compile Include="IParticipantAuditBL.cs" />
+    <Compile Include="IRoyaltorBalanceBL.cs" />
+    <Compile Include="IRoyContractNotesBL.cs" />
+    <Compile Include="IArtistResponsibilityMaintenanceBL.cs" />
+    <Compile Include="ICatalogueDetailsAuditBL.cs" />
+    <Compile Include="IPaymentApprovalBL.cs" />
+    <Compile Include="IPaymentDetailsBL.cs" />
+    <Compile Include="IRoyaltorEscalationRatesAuditBL.cs" />
+    <Compile Include="IRoyaltorPackagingRatesAuditBL.cs" />
+    <Compile Include="IRoyaltorPayeeAuditBL.cs" />
+    <Compile Include="IRoyaltorPayeeSuppAuditBL.cs" />
+    <Compile Include="IRoyaltorRatesAuditBL.cs" />
+    <Compile Include="IRoyaltorSubsidiaryRatesAuditBL.cs" />
+    <Compile Include="IRoyContractPayeeSuppBL.cs" />
+    <Compile Include="IRoyContractEscHistoryBL.cs" />
+    <Compile Include="IParticipantSummaryBL.cs" />
+    <Compile Include="IParticipantMaintenanceBL.cs" />
+    <Compile Include="IRoyContractRoyGroupingBL.cs" />
+    <Compile Include="ISupplierAddressOverwriteBL.cs" />
+    <Compile Include="ITerritoryGroupAuditBL.cs" />
+    <Compile Include="ITerritoryGroupRoyaltorsBL.cs" />
+    <Compile Include="ITrackListingBL.cs" />
+    <Compile Include="IAccountTypeMaintenanceBL.cs" />
+    <Compile Include="IBreakdownGroupMaintenanceBL.cs" />
+    <Compile Include="ICatalogueMaintenanceBL.cs" />
+    <Compile Include="ICatalogueSearchBL.cs" />
+    <Compile Include="ICustomerMaintenanceBL.cs" />
+    <Compile Include="IExchangeRateFactorsBL.cs" />
+    <Compile Include="IMissingParticipantsBL.cs" />
+    <Compile Include="IRoyContractEscRatesBL.cs" />
+    <Compile Include="IRoyContractPkgRatesBL.cs" />
+    <Compile Include="IRoyContractSubRatesBL.cs" />
+    <Compile Include="IOwnerAuditBL.cs" />
+    <Compile Include="IResponsibilityMaintenanceBL.cs" />
+    <Compile Include="IRoyContractAuditBL.cs" />
+    <Compile Include="IRoyContractBankBL.cs" />
+    <Compile Include="IRoyContractOptionPeriodsBL.cs" />
+    <Compile Include="IRoyContractPayeeBL.cs" />
+    <Compile Include="ICompanyAuditBL.cs" />
+    <Compile Include="IRoyaltorContractBL.cs" />
+    <Compile Include="IRoyaltorSearchBL.cs" />
+    <Compile Include="ICompanyMaintenanceBL.cs" />
+    <Compile Include="IConfigurationSearchBL.cs" />
+    <Compile Include="IInterestedPartyMaintenanceBL.cs" />
+    <Compile Include="ILabelMaintenanceBL.cs" />
+    <Compile Include="IOwnerMaintenanceBL.cs" />
+    <Compile Include="IRoyContractRoyRatesBL.cs" />
+    <Compile Include="ISalesTypeGroupingBL.cs" />
+    <Compile Include="ISalesTypeSearchBL.cs" />
+    <Compile Include="ITransactionRetrievalBL.cs" />
+    <Compile Include="IConfigurationGroupingBL.cs" />
+    <Compile Include="ISellerGroupBL.cs" />
+    <Compile Include="ITerritorySearchBL.cs" />
+    <Compile Include="ITransactionRetrievalStatusBL.cs" />
+    <Compile Include="IUserAccountMaintBL.cs" />
+    <Compile Include="IOptionPeriodLinksBL.cs" />
+    <Compile Include="IRoyaltorGroupingsBL.cs" />
+    <Compile Include="IRoyaltorReservesBL.cs" />
+    <Compile Include="IStmtProgressDashboardBL.cs" />
+    <Compile Include="IAdHocStatementBL.cs" />
+    <Compile Include="IWorkFlowBL.cs" />
+    <Compile Include="IRoyaltorStatementBL.cs" />
+    <Compile Include="IStatementRunBL.cs" />
+    <Compile Include="ICommonBL.cs" />
+    <Compile Include="ILoginBL.cs" />
+    <Compile Include="IRoyaltorActivityBL.cs" />
+    <Compile Include="IRoyaltorCostsBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

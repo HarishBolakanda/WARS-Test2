@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{058FC382-5515-474F-8B4F-38012353ED8C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WARS.BusinessLayer</RootNamespace>
+    <AssemblyName>BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>    
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataAccessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataAccessLayer\bin\Debug\DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="IBusiness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IBusiness\bin\Debug\IBusiness.dll</HintPath>
+    </Reference>
+    <Reference Include="IDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IDAL\bin\Debug\IDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountTypeMaintenanceBL.cs" />
+    <Compile Include="ArtistResponsibilityMaintenanceBL.cs" />
+    <Compile Include="AutoParticipantAuditBL.cs" />
+    <Compile Include="AutoParticipantMaintAuditBL.cs" />
+    <Compile Include="AutoParticipantMaintenanceBL.cs" />
+    <Compile Include="AutoParticipantSearchBL.cs" />
+    <Compile Include="BreakdownGroupMaintenanceBL.cs" />
+    <Compile Include="CatalogueDetailsAuditBL.cs" />
+    <Compile Include="CatalogueMaintenanceBL.cs" />
+    <Compile Include="CatalogueNotesBL.cs" />
+    <Compile Include="CatalogueSearchBL.cs" />
+    <Compile Include="CommonBL.cs" />
+    <Compile Include="AdHocStatementBL.cs" />
+    <Compile Include="CompanyAuditBL.cs" />
+    <Compile Include="CompanyMaintenanceBL.cs" />
+    <Compile Include="ConfigurationGroupingBL.cs" />
+    <Compile Include="ConfigurationSearchBL.cs" />
+    <Compile Include="ConfigurationGroupAuditBL.cs" />
+    <Compile Include="ArtistAuditBL.cs" />
+    <Compile Include="FuzzySearchBL.cs" />
+    <Compile Include="InterestedPartyAuditBL.cs" />
+    <Compile Include="NotesOverviewBL.cs" />
+    <Compile Include="RoyContractTaxDetailsBL.cs" />
+    <Compile Include="StatementTextMaintenanceBL.cs" />
+    <Compile Include="TaxRateMaintananceBL.cs" />
+    <Compile Include="TransactionMaintenanceBL.cs" />
+    <Compile Include="PaymentExchangeRatesBL.cs" />
+    <Compile Include="BOReportsBL.cs" />
+    <Compile Include="RoyaltorGroupingAuditBL.cs" />
+    <Compile Include="ParticipantAuditBL.cs" />
+    <Compile Include="RoyaltorBalanceBL.cs" />
+    <Compile Include="RoyContractNotesBL.cs" />
+    <Compile Include="PaymentApprovalBL.cs" />
+    <Compile Include="PaymentDetailsBL.cs" />
+    <Compile Include="RoyaltorEscalationRatesAuditBL.cs" />
+    <Compile Include="RoyaltorPackagingRatesAuditBL.cs" />
+    <Compile Include="RoyaltorPayeeAuditBL.cs" />
+    <Compile Include="RoyaltorPayeeSuppAuditBL.cs" />
+    <Compile Include="RoyaltorRatesAuditBL.cs" />
+    <Compile Include="RoyaltorSubsidiaryRatesAuditBL.cs" />
+    <Compile Include="RoyContractPayeeSuppBL.cs" />
+    <Compile Include="RoyContractEscHistoryBL.cs" />
+    <Compile Include="ParticipantSummaryBL.cs" />
+    <Compile Include="ParticipantMaintenanceBL.cs" />
+    <Compile Include="RoyContractRoyGroupingBL.cs" />
+    <Compile Include="SupplierAddressOverwriteBL.cs" />
+    <Compile Include="TerritoryGroupAuditBL.cs" />
+    <Compile Include="TerritoryGroupRoyaltorsBL.cs" />
+    <Compile Include="TrackListingBL.cs" />
+    <Compile Include="CustomerMaintenanceBL.cs" />
+    <Compile Include="ExchangeRateFactorsBL.cs" />
+    <Compile Include="MissingParticipantsBL.cs" />
+    <Compile Include="RoyContractEscRatesBL.cs" />
+    <Compile Include="RoyContractPkgRatesBL.cs" />
+    <Compile Include="RoyContractSubRatesBL.cs" />
+    <Compile Include="OwnerAuditBL.cs" />
+    <Compile Include="ResponsibilityMaintenanceBL.cs" />
+    <Compile Include="RoyContractAuditBL.cs" />
+    <Compile Include="RoyContractBankBL.cs" />
+    <Compile Include="RoyContractOptionPeriodsBL.cs" />
+    <Compile Include="RoyContractPayeeBL.cs" />
+    <Compile Include="RoyaltorContractBL.cs" />
+    <Compile Include="InterestedPartyMaintenanceBL.cs" />
+    <Compile Include="LabelMaintenanceBL.cs" />
+    <Compile Include="RoyaltorSearchBL.cs" />
+    <Compile Include="OwnerMaintenanceBL.cs" />
+    <Compile Include="RoyContractRoyRatesBL.cs" />
+    <Compile Include="SalesTypeGroupingBL.cs" />
+    <Compile Include="SalesTypeSearchBL.cs" />
+    <Compile Include="TransactionRetrievalBL.cs" />
+    <Compile Include="SellerGroupBL.cs" />
+    <Compile Include="TerritorySearchBL.cs" />
+    <Compile Include="TransactionRetrievalStatusBL.cs" />
+    <Compile Include="UserAccountMaintBL.cs" />
+    <Compile Include="OptionPeriodLinksBL.cs" />
+    <Compile Include="RoyaltorGroupingsBL.cs" />
+    <Compile Include="RoyaltorReservesBL.cs" />
+    <Compile Include="StmtProgressDashboardBL.cs" />
+    <Compile Include="RoyaltorCostsBL.cs" />
+    <Compile Include="RoyaltorStatementBL.cs" />
+    <Compile Include="StatementRunBL.cs" />
+    <Compile Include="LoginBL.cs" />
+    <Compile Include="RoyaltorActivityBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkFlowBL.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
